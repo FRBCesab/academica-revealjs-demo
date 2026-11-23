@@ -2,4 +2,4 @@
 *_files/
 *.html
 
-!_extensions/academica/_partials/*.html
+!_extensions/frbcesab/academica/_partials/*.html
