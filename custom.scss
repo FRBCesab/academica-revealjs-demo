@@ -1,0 +1,78 @@
+/*-- scss:defaults --*/
+
+/*-- scss:rules --*/
+
+/* ========================================
+   7. FONT FAMILIES
+   ======================================== */
+
+.reveal {
+
+  .roboto {
+    font-family: $academica-font-sans;
+  }
+
+  .fira-code {
+    font-family: $academica-font-mono;
+  }
+}
+
+
+/* ========================================
+   8. FONT SHOWCASE
+   ======================================== */
+
+.reveal .font-showcase {
+
+  margin: 0.5em 0;
+  line-height: 1.5;
+
+}
+
+
+// Font showcase code background
+
+.reveal .g-cell:has(.font-showcase) pre code {
+  background-color: $academica-color-surface !important;
+}
+
+
+// Font showcase cell
+
+.reveal .g-cell:has(.font-showcase) {
+
+  box-shadow: $academica-shadow-md;
+  border-radius: $academica-border-radius-md !important;
+
+}
+
+.color-palette {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.color-item {
+  flex: 1;
+  text-align: center;
+}
+
+.color-square {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+}
+
+.color-label {
+  font-weight: 400;
+  font-size: 0.75em;
+  margin-bottom: 0.3rem;
+}
+
+.color-hex {
+  font-family: $font-family-monospace;
+  font-size: 0.55em;
+  color: $academica-color-text;
+}

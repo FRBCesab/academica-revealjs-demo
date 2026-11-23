@@ -1,0 +1,1350 @@
+---
+title: "Academica"
+subtitle: "An opinionated academic Quarto theme for RevealJS"
+
+footer: >
+  {{< fa brands github >}} 
+  [`frbcesab/academica-revealjs`](https://github.com/frbcesab/academica-revealjs)
+  &nbsp; &bull; &nbsp;
+  {{< fa brands creative-commons >}}
+  {{< fa brands creative-commons-by >}} 
+  [`CC BY 4.0`](https://creativecommons.org/licenses/by/4.0/deed.en)
+    
+image: "assets/logo-title.png"
+logo: "assets/logo-brand.png"
+favicon: "assets/favicon-32x32.png"
+
+lang: en
+
+creators:
+  - name: "Nicolas Casajus"
+    position: "Senior data scientist"
+
+    socials:
+      email: "nicolas.casajus@fondationbiodiversite.fr"
+      website: "https://nicolascasajus.fr"
+      github: "https://github.com/ahasverus"
+      orcid: "0000-0002-5537-5294"
+      scholar: "https://scholar.google.fr/citations?user=n1swa1UAAAAJ"
+
+    affiliations:
+      - name: "FRB-CESAB"
+        url: "https://www.fondationbiodiversite.fr/en/about-the-foundation/le-cesab/"
+
+format:
+  academica-revealjs: 
+    theme: custom.scss
+---
+
+
+# Getting started
+
+
+## Getting started
+
+::: {.size-sm}
+**Academica** is a [Quarto](https://quarto.org) extension built on RevealJS, 
+providing a consistent visual identity and opinionated defaults for academic 
+presentations.
+
+[]{.vspace-2xs}
+
+::: {.grid .g-gap-4}
+
+::: {.g-col-6}
+
+**Start from the template (new project)**
+
+```bash
+quarto use template frbcesab/academica-revealjs
+```
+
+:::
+
+::: {.g-col-6}
+
+**Or, add the extension to an existing project**
+
+```bash
+quarto add frbcesab/academica-revealjs
+```
+
+[]{.vspace-2xs}
+
+Then use it in the YAML of your `.qmd` file:
+
+```yaml
+format: academica-revealjs
+```
+:::
+:::
+:::
+
+
+> Casajus N (2026) _**Academica:** An opinionated academic Quarto theme for RevealJS_.<br>
+URL: <https://github.com/frbcesab/academica-revealjs>.
+
+
+
+# Theme overview
+
+
+## Color palette
+
+The **Academica** theme uses the following color palette:
+
+<br>
+
+<div class="color-palette">
+
+<div class="color-item">
+<div class="color-square" style="background-color: #0D657D;"></div>
+<div class="color-label">Primary</div>
+<div class="color-hex">#0D657D</div>
+</div>
+
+<div class="color-item">
+<div class="color-square" style="background-color: #4A626B;"></div>
+<div class="color-label">Secondary</div>
+<div class="color-hex">#4A626B</div>
+</div>
+
+<div class="color-item">
+<div class="color-square" style="background-color: #805A35;"></div>
+<div class="color-label">Accent</div>
+<div class="color-hex">#805A35</div>
+</div>
+
+<div class="color-item">
+<div class="color-square" style="background-color: #303638;"></div>
+<div class="color-label">Text</div>
+<div class="color-hex">#303638</div>
+</div>
+
+<div class="color-item">
+<div class="color-square" style="background-color: #F6F4EF;"></div>
+<div class="color-label">Background</div>
+<div class="color-hex">#F6F4EF</div>
+</div>
+
+<div class="color-item">
+<div class="color-square" style="background-color: #E9E7E0;"></div>
+<div class="color-label">Surface</div>
+<div class="color-hex">#E9E7E0</div>
+</div>
+
+</div>
+
+<br>
+
+::: {.size-xs}
+{{< fa circle-info size=sm >}}&nbsp;
+Designed with visual accessibility in mind, supporting users with color vision 
+deficiencies, low vision, and reduced contrast sensitivity.
+:::
+
+
+
+## Font families {#font-families}
+
+
+
+::: {.grid}
+
+::: {.g-col-5}
+
+### Roboto
+
+
+::: {.size-md}
+The primary typeface for headings and body text.
+:::
+
+::: {.size-sm}
+Available on Google Fonts [{{< fa up-right-from-square size=xs >}}](https://fonts.google.com/specimen/Roboto)
+:::
+
+:::
+
+::: {.g-col-1}
+:::
+
+::: {.g-col-6 .g-cell style='background-color: #E9E7E0;border:0;'}
+
+::: {.font-showcase .roboto}
+Aa Bb Cc Dc Ee Ff<br>
+ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+0123456789
+:::
+
+:::
+
+:::
+
+
+[]{.vspace-md}
+
+:::: {.grid}
+
+::: {.g-col-5}
+
+### Fira Code
+
+::: {.size-md}
+A monospaced typeface with ligatures for code.
+:::
+
+::: {.size-sm}
+Available on Google Fonts [{{< fa up-right-from-square size=xs >}}](https://fonts.google.com/specimen/Fira+Code)
+:::
+:::
+
+::: {.g-col-1}
+:::
+
+::: {.g-col-6 .g-cell style='background-color: #E9E7E0;border:0;'}
+
+::: {.size-xl .font-showcase .fira-code}
+```
+if (nrow(tab) >= 0) tab |> head()
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+0123456789
+```
+:::
+
+:::
+
+::::
+
+
+# Opening slide
+
+## Opening slide
+
+![](assets/titleslide.png){.box-shadow fig-align='center' width=80%}
+
+
+## Image
+
+::: {.grid}
+
+::: {.g-col-7}
+![](assets/titleslide-image.png){.box-shadow width=100%}
+
+:::
+
+::: {.g-col-5 .size-sm}
+
+[]{.vspace-sm}
+
+Use the YAML parameter:
+
+- `image`
+
+[]{.vspace-xs}
+
+```{.yaml}
+image: assets/logo-title.png
+```
+:::
+
+:::
+
+
+## Title and subtitle
+
+::: {.grid}
+
+::: {.g-col-7}
+![](assets/titleslide-title.png){.box-shadow width=100%}
+:::
+
+::: {.g-col-5 .size-sm}
+
+[]{.vspace-sm}
+
+Use the YAML parameters:
+
+- `title`
+- `subtitle`
+
+[]{.vspace-xs}
+
+```{.yaml}
+title: "Petrol & Linen"
+subtitle: "An opinionated academic..."
+```
+:::
+
+:::
+
+## Date
+
+::: {.grid}
+
+::: {.g-col-7}
+![](assets/titleslide-date.png){.box-shadow width=100%}
+:::
+
+::: {.g-col-5 .size-sm}
+
+[]{.vspace-sm}
+
+Use the YAML parameters:
+
+- `date`
+- `date-format`
+
+[]{.vspace-xs}
+
+```{.yaml}
+format:
+  academica-revealjs:
+    date: today
+    date-format: "MMMM YYYY"
+```
+:::
+
+:::
+
+
+[]{.vspace-xs}
+
+::: {.size-xs}
+{{< fa circle-info size=sm >}}&nbsp;
+More information on how to format dates in Quarto [{{< fa up-right-from-square size=xs >}}](https://quarto.org/docs/reference/dates.html)
+:::
+
+
+
+## Authors
+
+::: {.grid}
+
+::: {.g-col-7}
+![](assets/titleslide-author.png){.box-shadow width=100%}
+:::
+
+::: {.g-col-5 .size-sm}
+
+[]{.vspace-sm}
+
+Use the YAML parameters:
+
+- `authors`
+- `name`
+- `role`
+
+[]{.vspace-xs}
+
+```{.yaml}
+authors:
+  - name: "Nicolas Casajus"
+    role: "Senior data scientist"
+```
+:::
+
+:::
+
+[]{.vspace-xs}
+
+::: {.size-xs}
+{{< fa circle-info size=sm >}}&nbsp;
+This theme supports **up to three** authors.
+:::
+
+
+
+
+## Socials
+
+::: {.grid}
+
+::: {.g-col-7}
+![](assets/titleslide-socials.png){.box-shadow width=100%}
+:::
+
+::: {.g-col-5 .size-sm}
+
+[]{.vspace-sm}
+
+Use the YAML parameters:
+
+- `authors`
+- `socials`
+
+[]{.vspace-xs}
+
+```{.yaml}
+authors:
+  - name: "Nicolas Casajus"
+    socials:
+      email: "mail@example.org"
+      orcid: "..."
+```
+:::
+
+:::
+
+[]{.vspace-xs}
+
+::: {.size-xs}
+{{< fa circle-info size=sm >}}&nbsp;
+This theme only supports icons for: **ORCID**, **Email**, **Website**, **GitHub**, **Google Scholar**.
+:::
+
+
+
+## Author affiliation
+
+::: {.grid}
+
+::: {.g-col-7}
+![](assets/titleslide-affiliation.png){.box-shadow width=100%}
+:::
+
+::: {.g-col-5 .size-sm}
+
+[]{.vspace-sm}
+
+Use the YAML parameters:
+
+- `authors`
+- `affiliations`
+
+[]{.vspace-xs}
+
+```{.yaml}
+authors:
+  - name: "Nicolas Casajus"
+    affiliations:
+      - name: "FRB-CESAB"
+        website: "https://..."
+```
+:::
+
+:::
+
+[]{.vspace-xs}
+
+::: {.size-xs}
+{{< fa circle-info size=sm >}}&nbsp;
+This theme supports **many affiliations** per author.
+:::
+
+# Footer
+
+
+## Footer
+
+::: {.grid}
+
+::: {.g-col-7}
+![](assets/footer.png){.box-shadow width=100%}
+
+:::
+
+::: {.g-col-5 .size-sm}
+
+[]{.vspace-sm}
+
+Use the YAML parameter:
+
+- `footer`
+
+[]{.vspace-xs}
+
+```{.yaml}
+footer: This is a footer
+```
+:::
+
+:::
+
+
+## Logo
+
+::: {.grid}
+
+::: {.g-col-7}
+![](assets/footer-logo.png){.box-shadow width=100%}
+
+:::
+
+::: {.g-col-5 .size-sm}
+
+[]{.vspace-sm}
+
+Use the YAML parameter:
+
+- `logo`
+
+[]{.vspace-xs}
+
+```{.yaml}
+format:
+  academica-revealjs:
+    logo: assets/logo-brand.png
+```
+:::
+
+:::
+
+
+
+# Typography
+
+## Markdown basics
+
+:::: {.columns .size-sm}
+::: {.column width="50%"}
+
+#### Text formatting
+
+A regular paragraph with normal, **bold**, _italic_, ~~strikethrough~~ and `inline code`.
+
+[]{.vspace-2xs}
+
+#### Lists
+
+:::: {.columns}
+::: {.column}
+- Unordered item
+- Another item
+:::
+
+::: {.column}
+1. Numbered item
+1. Another item
+:::
+::::
+
+[]{.vspace-2xs}
+
+#### Links
+
+- <https://quarto.org>
+- [Quarto documentation](https://quarto.org)
+- Quarto documentation [{{< fa up-right-from-square size=xs >}}](https://quarto.org/)
+
+:::
+
+::: {.column width=10%}
+:::
+
+::: {.column width=40% .size-xs}
+
+| Element        | Syntax             |
+|:------------|:----------------------|
+| Header 1       | `# Header`         |
+| Header 4       | `#### Header`      |
+| Bold           | `**bold**`         |
+| Italic         | `*italic*`         |
+| Strikethrough  | `~~text~~`         |
+| Inline code    |`code`              |
+| Unordered list | `- item`           |
+| Numbered list  | `1. item`          |
+| Image          | `![caption](path)` |
+| Link           | `[text](url)`      |
+| Link           | `<url>`            |
+
+:::
+
+::::
+
+## CSS classes: styling your content
+
+::: {.size-sm}
+Quarto allows you to apply **CSS classes** to Markdown elements using `div` and `span`.
+
+[]{.vspace-2xs}
+
+#### Block-level styling — `div`
+
+Use a fenced `div` to apply a CSS class to a **block of content**.
+
+::: {.width-66}
+
+```{.md}
+::: {.size-xs}
+This entire block receives the `size-xs` style.
+
+You can include paragraphs, lists, and other Markdown elements.
+:::
+```
+:::
+
+[]{.vspace-sm}
+
+#### Inline styling — `span`
+
+Use a `span` to apply a CSS class to a **portion of text**.
+
+::: {.width-66}
+
+```{.md}
+This is a [special phrase]{.size-xl} inside a paragraph.
+```
+:::
+
+:::
+
+## Text emphasis
+
+You can **highlight some text** using the following CSS classes:
+
+::: {.vspace-sm}
+:::
+
+::: {.size-sm}
+
+:::: {.columns}
+::: {.column}
+
+- The `.bg-*` classes
+
+::: {.size-sm}
+| Class | Output |
+|:------|:-------|
+| `.bg` or `.bg-note` | One [important]{.bg-note} detail      |
+| `.bg-tip`           | One [important]{.bg-tip} detail       |
+| `.bg-important`     | One [important]{.bg-important} detail |
+:::
+:::
+
+::: {.column}
+
+- The `.fg-*` classes
+
+::: {.size-sm}
+| Class | Output |
+|:------|:-------|
+| `.fg` or `.fg-note` | One [important]{.fg-note} detail      |
+| `.fg-tip`           | One [important]{.fg-tip} detail       |
+| `.fg-important`     | One [important]{.fg-important} detail |
+:::
+:::
+::::
+
+:::
+
+## Font sizing
+
+Use the following CSS classes to **customize the font size** of any element 
+
+
+[]{.vspace-xs}
+
+::: {.grid}
+
+::: {.g-col-4 .g-cell}
+`.size-lg` (1.125em)
+
+[**Large**]{.size-lg} text
+:::
+
+::: {.g-col-4 .g-cell}
+`.size-xl` (1.25em)
+
+[**Very large**]{.size-xl} text
+:::
+
+::: {.g-col-4 .g-cell}
+`.size-2xl` (1.50em)
+
+[**Extra large**]{.size-2xl} text
+:::
+
+::: {.g-col-4 .g-cell}
+`.size-sm` (0.875em)
+
+[**Small**]{.size-sm} text
+:::
+
+::: {.g-col-4 .g-cell}
+`.size-xs` (0.75em)
+
+[**Very small**]{.size-xs} text
+:::
+
+::: {.g-col-4 .g-cell}
+`.size-2xs` (0.60em)
+
+[**Extra small**]{.size-2xs} text
+:::
+
+:::
+
+::: {.vspace-md}
+:::
+
+::: {.size-xs}
+{{< fa circle-info size=sm >}}&nbsp; Works with slide, div, span, paragraph, 
+list, blockquote, table, code block and grid!
+:::
+
+
+## Text alignment
+
+
+Use the CSS classes `.text-center` & `.text-right` to 
+**horizontally align** text
+
+::: {.vspace-sm}
+:::
+
+::: {.text-center}
+This text is centered.
+:::
+
+::: {.text-right}
+This text is aligned to the right.
+:::
+
+
+[]{.vspace-sm}
+
+```{.md}
+::: {.text-center}
+This text is centered.
+:::
+
+::: {.text-right}
+This text is aligned to the right.
+:::
+```
+
+
+# Components
+
+## Block quotes
+
+> A robot may not injure a human being, or, through inaction, 
+> allow a human being to come to harm.
+>
+> [Isaac Asimov]{.quote-author}
+> [I, Robot · 1950 (The First Law of Robotics)]{.quote-source}
+
+
+
+::: {.vspace-md}
+:::
+
+::: {.size-sm}
+This theme implements two CSS classes: `.quote-author` and `.quote-source`
+:::
+
+::: {.vspace-sm}
+:::
+
+::: {.width-75}
+```{.md}
+> A robot may not injure a human being, or, through inaction, 
+> allow a human being to come to harm.
+>
+> [Isaac Asimov]{.quote-author}
+> [I, Robot · 1950 (The First Law of Robotics)]{.quote-source}
+```
+:::
+
+## Callout blocks
+
+:::: {.columns}
+
+::: {.column width=50%}
+:::{.callout-tip}
+## Tip
+
+Use this code to create a callout block:
+
+```{.quarto}
+:::{.callout-tip}
+## Tip
+
+Use this code to create a callout block:
+:::
+```
+
+:::
+:::
+
+::: {.column width=50%}
+:::{.callout-note}
+## Note
+
+Use this code to create a callout block:
+
+```{.quarto}
+:::{.callout-note}
+## Note
+
+Use this code to create a callout block:
+:::
+```
+:::
+:::
+
+::::
+
+:::: {.columns}
+
+::: {.column width=50%}
+:::{.callout-important}
+## Important
+
+Use this code to create a callout block:
+
+```{.quarto}
+:::{.callout-important}
+## Important
+
+Use this code to create a callout block:
+:::
+```
+:::
+:::
+
+::: {.column width=50%}
+:::{.callout-caution}
+## Caution
+
+Use this code to create a callout block:
+
+```{.quarto}
+:::{.callout-caution}
+## Caution
+
+Use this code to create a callout block:
+:::
+```
+:::
+:::
+
+::::
+
+
+
+## Tables
+
+::: {.grid}
+
+::: {.g-col-6 .width-75}
+
+```{.md}
+|  Col  | Description    |
+| :---: | :------------- |
+|   1   | Lorem ipsum    |
+|   2   | Lorem ipsum    |
+```
+
+:::
+
+::: {.g-col-6}
+
+|  Col  | Description    |
+| :---: | :------------- |
+|   1   | Lorem ipsum    |
+|   2   | Lorem ipsum    |
+
+:::
+
+::: {.g-col-6 .width-75}
+
+```{.md}
+::: {.size-xs}
+|  Col  | Description    |
+| :---: | :------------- |
+|   1   | Lorem ipsum    |
+|   2   | Lorem ipsum    |
+:::
+```
+:::
+
+::: {.g-col-6 .size-xs}
+
+|  Col  | Description    |
+| :---: | :------------- |
+|   1   | Lorem ipsum    |
+|   2   | Lorem ipsum    |
+
+:::
+
+
+::: {.g-col-6 .width-75}
+
+```{.md}
+::: {.full-width-table}
+|  Col  | Description    |
+| :---: | :------------- |
+|   1   | Lorem ipsum    |
+|   2   | Lorem ipsum    |
+:::
+```
+:::
+
+::: {.g-col-6 .size-xs .full-width-table}
+
+|  Col  | Description    |
+| :---: | :------------- |
+|   1   | Lorem ipsum    |
+|   2   | Lorem ipsum    |
+
+:::
+
+:::
+
+
+## Images
+
+::: {.grid}
+
+::: {.g-col-4 .g-cell}
+![Left aligned](assets/logo-title.png){fig-align="left" width=50%}
+:::
+
+::: {.g-col-4 .g-cell}
+![Centered](assets/logo-title.png){fig-align="center" width=50%}
+:::
+
+::: {.g-col-4 .g-cell}
+![Right aligned](assets/logo-title.png){fig-align="right" width=50%}
+:::
+:::
+
+[]{.vspace-md}
+
+::: {.width-75}
+
+```{.md}
+![Left aligned](assets/logo-title.png){fig-align="left" width=50%}
+```
+:::
+
+[]{.vspace-sm}
+
+::: {.size-xs}
+{{< fa circle-info size=sm >}}&nbsp; Caption alignment will follow image alignment
+:::
+
+
+
+# Layouts
+
+
+
+## Multi-column layouts
+
+Disposition en deux ou plusieurs colonnes
+
+
+
+## Grid layouts
+
+::: {.grid .g-justify-center .text-center}
+
+::: {.g-col-6 .g-cell}
+`.g-col-6`
+:::
+
+::: {.g-col-6 .g-cell}
+`.g-col-6`
+:::
+
+
+::: {.g-col-4 .g-cell}
+`.g-col-4`
+:::
+
+::: {.g-col-4 .g-cell}
+`.g-col-4`
+:::
+
+::: {.g-col-4 .g-cell}
+`.g-col-4`
+:::
+
+::: {.g-col-2 .g-cell}
+`.g-col-2`
+:::
+
+::: {.g-col-8 .g-cell}
+`.g-col-8`
+:::
+
+::: {.g-col-2 .g-cell}
+`.g-col-2`
+:::
+
+::: {.g-col-3 .g-cell}
+`.g-col-3`
+:::
+
+::: {.g-col-3 .g-cell}
+`.g-col-3`
+:::
+
+::: {.g-col-3 .g-cell}
+`.g-col-3`
+:::
+
+::: {.g-col-3 .g-cell}
+`.g-col-3`
+:::
+
+::: {.g-col-2 .g-cell}
+`.g-col-2`
+:::
+
+::: {.g-col-2 .g-cell}
+`.g-col-2`
+:::
+
+::: {.g-col-2 .g-cell}
+`.g-col-2`
+:::
+
+::: {.g-col-2 .g-cell}
+`.g-col-2`
+:::
+
+::: {.g-col-2 .g-cell}
+`.g-col-2`
+:::
+
+::: {.g-col-2 .g-cell}
+`.g-col-2`
+:::
+
+:::
+
+## Element width
+
+Use the CSS classes `.width-*` to **reduce the width** of any element
+
+::: {.vspace-sm}
+:::
+
+```{.md}
+A paragraph
+```
+
+::: {.width-75}
+```{.md}
+::: {.width-75}
+A paragraph
+:::
+```
+:::
+
+
+::: {.width-50}
+```{.md}
+::: {.width-50}
+A paragraph
+:::
+```
+:::
+
+::: {.width-25}
+```{.md}
+::: {.width-25}
+A paragraph
+:::
+```
+:::
+
+[]{.vspace-2xs}
+
+::: {.size-xs}
+{{< fa circle-info size=sm >}}&nbsp; Available width are: `.width-25` `.width-33`
+`.width-50` `.width-66` `.width-75`
+:::
+
+
+
+## Horizontal positioning
+
+::: {.left .width-33}
+```{.md}
+::: {.left .width-33}
+Left block
+:::
+```
+:::
+
+::: {.center .width-33}
+```{.md}
+::: {.center .width-33}
+Central block
+:::
+```
+:::
+
+
+::: {.right .width-33}
+```{.md}
+::: {.right .width-33}
+Right block
+:::
+```
+:::
+
+
+## Vertical spacing
+
+
+
+# Class reference
+
+## Class reference {.full-width-table}
+
+::: {.grid .size-2xs .g-gap-3}
+
+::: {.g-col-4 .no-border}
+
+|                |
+| :------------- |
+| `.left`        |
+| `.center`      |
+| `.right`       |
+| `.middle`      |
+| `.text-left`   |
+| `.text-center` |
+| `.text-right`  |
+| `.size-2xs`    |
+| `.size-xs`     |
+| `.size-sm`     |
+| `.size-lg`     |
+| `.size-xl`     |
+| `.size-2xl`    |
+
+:::
+
+::: {.g-col-4 .no-border}
+
+|               |
+| :------------ |
+| `.width-25`   |
+| `.width-33`   |
+| `.width-50 `  |
+| `.width-66 `  |
+| `.width-75`   |
+| `.vspace-2xs` |
+| `.vspace-xs ` |
+| `.vspace-sm ` |
+| `.vspace-md ` |
+| `.vspace-lg ` |
+| `.vspace-xl ` |
+| `.vspace-2xl` |
+| `.box-shadow` |
+:::
+
+::: {.g-col-4 .no-border}
+
+|                     |
+| :------------------ |
+| `.bg` &nbsp; `.bg-note` |
+| `.bg-tip`           |
+| `.bg-important`     |
+| `.fg` &nbsp; `.fg-note` |
+| `.fg-tip`           |
+| `.fg-important`     |
+| `.quote-author`     |
+| `.quote-source`     |
+| `.full-width-table` |
+| `.grid`             |
+| `.g-col-*`          |
+| `.g-gap-*`          |
+
+:::
+:::
+
+
+# Extra
+
+## Fontawesome icons
+
+Instructions...
+
+
+
+## Fontawesome icons {.full-width-table}
+
+::: {.grid .size-2xs}
+
+::: {.g-col-4}
+
+| Label               | Icon                                 |
+|:----------------|:----:|
+| `code`              | {{< fa code size=lg >}}              |
+| `terminal`          | {{< fa terminal size=lg >}}          |
+| `brands git-alt`    | {{< fa brands git-alt size=lg >}}    |
+| `brands github`     | {{< fa brands github size=lg >}}     |
+| `brands gitlab`     | {{< fa brands gitlab size=lg >}}     |
+| `code-commit`       | {{< fa code-commit size=lg >}}       |
+| `code-fork`         | {{< fa code-fork size=lg >}}         |
+| `code-branch`       | {{< fa code-branch size=lg >}}       |
+| `code-compare`      | {{< fa code-compare size=lg >}}      |
+| `code-merge`        | {{< fa code-merge size=lg >}}        |
+| `code-pull-request` | {{< fa code-pull-request size=lg >}} |
+
+:::
+
+::: {.g-col-4}
+
+| Label                   | Icon                                     |
+|:----------------|:----:|
+| `brands orcid`          | {{< fa brands orcid size=lg >}}          |
+| `brands google-scholar` | {{< fa brands google-scholar size=lg >}} |
+| `brands facebook`       | {{< fa brands facebook size=lg >}}       |
+| `brands linkedin`       | {{< fa brands linkedin size=lg >}}       |
+| `brands instagram`      | {{< fa brands instagram size=lg >}}      |
+| `brands x-twitter`      | {{< fa brands x-twitter size=lg >}}      |
+| `brands mastodon`       | {{< fa brands mastodon size=lg >}}       |
+| `brands telegram`       | {{< fa brands telegram size=lg >}}       |
+| `brands youtube`        | {{< fa brands youtube size=lg >}}        |
+| `brands discord`        | {{< fa brands discord size=lg >}}        |
+| `brands twitch`         | {{< fa brands twitch size=lg >}}         |
+
+:::
+
+::: {.g-col-4}
+| Label            | Icon                              |
+|:----------------|:----:|
+| `brands apple`   | {{< fa brands apple size=lg >}}   |
+| `brands windows` | {{< fa brands windows size=lg >}} |
+| `brands linux`   | {{< fa brands linux size=lg >}}   |
+| `brands debian`  | {{< fa brands debian size=lg >}}  |
+| `brands fedora`  | {{< fa brands fedora size=lg >}}  |
+| `brands redhat`  | {{< fa brands redhat size=lg >}}  |
+| `brands ubuntu`  | {{< fa brands ubuntu size=lg >}}  |
+| `brands chrome`  | {{< fa brands chrome size=lg >}}  |
+| `brands edge`    | {{< fa brands edge size=lg >}}    |
+| `brands firefox` | {{< fa brands firefox size=lg >}} |
+| `brands safari`  | {{< fa brands safari size=lg >}}  |
+:::
+
+:::
+
+## Fontawesome icons {.full-width-table}
+
+::: {.grid .size-2xs}
+
+::: {.g-col-4}
+
+| Label              | Icon                                |
+|:----------------|:----:|
+| `brands python`    | {{< fa brands python size=lg >}}    |
+| `brands r-project` | {{< fa brands r-project size=lg >}} |
+| `brands markdown`  | {{< fa brands markdown size=lg >}}  |
+| `brands html5`     | {{< fa brands html5 size=lg >}}     |
+| `brands css3-alt`  | {{< fa brands css3-alt size=lg >}}  |
+| `brands js`        | {{< fa brands js size=lg >}}        |
+| `brands rust`      | {{< fa brands rust size=lg >}}      |
+| `brands golang`    | {{< fa brands golang size=lg >}}    |
+| `brands php`       | {{< fa brands php size=lg >}}       |
+| `brands sass`      | {{< fa brands sass size=lg >}}      |
+| `brands docker`    | {{< fa brands docker size=lg >}}    |
+
+:::
+
+::: {.g-col-4}
+
+| Label                  | Icon                                    |
+|:----------------|:----:|
+| `arrow-right`          | {{< fa arrow-right size=lg >}}          |
+| `right-long`           | {{< fa right-long size=lg >}}           |
+| `circle-arrow-right`   | {{< fa circle-arrow-right size=lg >}}   |
+| `circle-right`         | {{< fa circle-right size=lg >}}         |
+| `circle-chevron-right` | {{< fa circle-chevron-right size=lg >}} |
+| `right-to-bracket`     | {{< fa right-to-bracket size=lg >}}     |
+| `right-from-bracket`   | {{< fa right-from-bracket size=lg >}}   |
+| `left-right`           | {{< fa left-right size=lg >}}           |
+| `right-left`           | {{< fa right-left size=lg >}}           |
+| `arrow-rotate-right`   | {{< fa arrow-rotate-right size=lg >}}   |
+| `up-right-from-square` | {{< fa up-right-from-square size=lg >}} |
+
+:::
+
+::: {.g-col-4}
+
+| Label                  | Icon                                    |
+|:----------------|:----:|
+| `check`                | {{< fa check size=lg >}}                |
+| `xmark`                | {{< fa xmark size=lg >}}                |
+| `circle-check`         | {{< fa circle-check size=lg >}}         |
+| `circle-xmark`         | {{< fa circle-xmark size=lg >}}         |
+| `circle-exclamation`   | {{< fa circle-exclamation size=lg >}}   |
+| `triangle-exclamation` | {{< fa triangle-exclamation size=lg >}} |
+| `circle-question`      | {{< fa circle-question size=lg >}}      |
+| `circle-info`          | {{< fa circle-info size=lg >}}          |
+| `lightbulb`            | {{< fa lightbulb size=lg >}}            |
+| `square`               | {{< fa square size=lg >}}               |
+| `circle`               | {{< fa circle size=lg >}}               |
+
+:::
+
+:::
+
+
+## Fontawesome icons {.full-width-table}
+
+::: {.grid .size-2xs}
+
+::: {.g-col-4}
+
+| Label                  | Icon                                            |
+|:----------------|:----:|
+| `stamp`                | {{< fa stamp size=lg >}}                        |
+| `file-signature`       | {{< fa file-signature size=lg >}}               |
+| `certificate`          | {{< fa certificate size=lg >}}                  |
+| `award`                | {{< fa award size=lg >}}                        |
+| `copyright`            | {{< fa copyright size=lg >}}                    |
+| `creative-commons`     | {{< fa brands creative-commons size=lg >}}      |
+| `creative-commons-zero`| {{< fa brands creative-commons-zero size=lg >}} |
+| `creative-commons-by`  | {{< fa brands creative-commons-by size=lg >}}   |
+| `creative-commons-nc`  | {{< fa brands creative-commons-nc size=lg >}}   |
+| `creative-commons-nd`  | {{< fa brands creative-commons-nd size=lg >}}   |
+| `creative-commons-sa`  | {{< fa brands creative-commons-sa size=lg >}}   |
+
+
+:::
+
+::: {.g-col-4}
+
+| Label                 | Icon                                   |
+|:----------------|:----:|
+| `user`                | {{< fa user size=lg >}}                |
+| `users`               | {{< fa users size=lg >}}               |
+| `user-group`          | {{< fa user-group size=lg >}}          |
+| `users-line`          | {{< fa users-line size=lg >}}          |
+| `users-between-lines` | {{< fa users-between-lines size=lg >}} |
+| `envelope`            | {{< fa envelope size=lg >}}            |
+| `paper-plane`         | {{< fa paper-plane size=lg >}}         |
+| `globe`               | {{< fa globe size=lg >}}               |
+| `clock`               | {{< fa clock size=lg >}}               |
+| `lock`                | {{< fa lock size=lg >}}                |
+| `lock-open`           | {{< fa lock-open size=lg >}}           |
+
+
+:::
+
+::: {.g-col-4}
+
+| Label         | Icon                           |
+|:----------------|:----:|
+| `house`       | {{< fa house size=lg >}}       |
+| `wrench`      | {{< fa wrench size=lg >}}      |
+| `table`       | {{< fa table size=lg >}}       |
+| `file`        | {{< fa file size=lg >}}        |
+| `file-pen`    | {{< fa file-pen size=lg >}}    |
+| `file-lines`  | {{< fa file-lines size=lg >}}  |
+| `book-open`   | {{< fa book-open size=lg >}}   |
+| `layer-group` | {{< fa layer-group size=lg >}} |
+| `database`    | {{< fa database size=lg >}}    |
+| `image`       | {{< fa image size=lg >}}       |
+| `cube`        | {{< fa cube size=lg >}}        |
+
+:::
+:::
+
