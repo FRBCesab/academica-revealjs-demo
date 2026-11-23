@@ -1,0 +1,5 @@
+/.quarto/
+*_files/
+*.html
+
+!_extensions/frbcesab/academica/_partials/*.html
